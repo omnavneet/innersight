@@ -23,6 +23,7 @@ export const PATCH = async (req, { params }) => {
 
   const savedAnalysis = await AnalysisModel.findOneAndUpdate(
     {
+      userId: user?._id,
       entryId: updatedEntry?._id,
     },
     {

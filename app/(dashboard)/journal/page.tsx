@@ -1,7 +1,6 @@
 import EntryCard from '@/app/components/EntryCard'
 import NewEntryCard from '@/app/components/NewEntryCard'
 import Question from '@/app/components/Question'
-import { analyze } from '@/app/libs/ai'
 import getUserByClerkId from '@/app/libs/auth'
 import { connectionDB } from '@/app/libs/connectionDB'
 import { JournalEntryModel } from '@/app/models/Ad'
@@ -21,10 +20,10 @@ const getAllEntries = async () => {
 const JournalPage = async () => {
   const entries = await getAllEntries()
   return (
-    <div className="px-10 py-5">
+    <div className="lg:px-10 md:px-6 px-3 py-5">
       <h2 className="text-xl font-semibold mb-5">Journal</h2>
       <Question />
-      <div className="grid grid-cols-4 gap-x-4 gap-y-2">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-4 gap-y-2">
         <div className="h-[250px]">
           <NewEntryCard />
         </div>

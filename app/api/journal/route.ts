@@ -13,6 +13,7 @@ export const POST = async () => {
 
   const analysis = await analyze(entry.content)
   await AnalysisModel.create({
+    userId: user?._id,
     entryId: entry._id,
     ...analysis,
   })

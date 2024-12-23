@@ -7,19 +7,19 @@ const Header = () => {
   const links = [
     { name: 'Home', path: '/' },
     { name: 'Dashboard', path: '/journal' },
-    { name: 'History', path: '/history' },
+    { name: 'History', path: '/graph' },
   ]
 
   return (
     <div className="flex items-center justify-between py-7 pl-10 pr-12">
       <div
-        className="text-red-500 text-5xl font-bold cursor-pointer"
+        className="text-[#d35400] text-5xl font-bold cursor-pointer hidden lg:block md:block"
         onClick={() => redirect('/journal')}
       >
         InnerSight
       </div>
 
-      <div className="bg-red-200 rounded-full px-8 py-3 flex justify-center items-center ml-[-220px] shadow-lg hover:shadow-2xl ">
+      <div className="bg-[#ff846fca] rounded-full px-8 py-3 flex justify-center items-center md:ml-[-220px] ml-[-32x] shadow-lg hover:shadow-2xl ">
         <ul className="flex gap-10 text-lg">
           {links.map((link) => (
             <li
