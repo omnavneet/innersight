@@ -7,6 +7,6 @@ export async function connectionDB() {
     return mongoose.connection
   } else {
     isConnected = mongoose.connection.readyState === 1
-    return await mongoose.connect(process.env.MONGODB_URL as string)
+    return await mongoose.connect(process.env.MONGODB_URL)
   }
 }
