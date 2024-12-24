@@ -29,11 +29,11 @@ const Question = () => {
           placeholder="Enter your question here"
           value={value}
           onChange={onChange}
-          className="border border-black font-semibold rounded-lg py-3 pr-56 pl-2 mr-3"
+          className="border border-black font-semibold rounded-lg py-3 md:pr-56 pr-10 pl-2 mr-3"
         />
         <button
           type="submit"
-          className="bg-[#ffcc00] px-6 py-3 rounded-lg"
+          className="px-6 py-3 bg-[#ffcc00] rounded-lg text-gray-700 font-semibold text-base md:text-lg lg:text-xl shadow-2xl shadow-red hover:scale-105 transform transition duration-300"
           disabled={loading}
         >
           Submit

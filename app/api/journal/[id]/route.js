@@ -4,6 +4,22 @@ import { AnalysisModel, JournalEntryModel } from '@/app/models/Ad'
 import { revalidatePath } from 'next/cache'
 import { NextResponse } from 'next/server'
 
+export const DELETE = async (req, { params }) => {
+  const user = await getUserByClerkId()
+  const deletedEntry = await JournalEntryModel.findOneAndDelete({
+    _id: params.id,
+    userId: user?._id,
+  })
+
+  await AnalysisModel.findOneAndDelete({
+    entryId: deletedEntry?._id,
+    userId: user?._id,
+  })
+
+  revalidatePath('/journal')
+  return NextResponse.json({ data: deletedEntry })
+}
+
 export const PATCH = async (req, { params }) => {
   const { content } = await req.json()
   const user = await getUserByClerkId()

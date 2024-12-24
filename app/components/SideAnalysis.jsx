@@ -14,7 +14,7 @@ const SideAnalysis = ({ analysis }) => {
     <div>
       <div
         className={
-          ' flex justify-center items-center h-40 text-xl font-semibold'
+          ' flex justify-center items-center md:h-40 h-24 text-xl font-semibold'
         }
         style={{ backgroundColor: color }}
       >
@@ -25,7 +25,7 @@ const SideAnalysis = ({ analysis }) => {
           data.name === 'Summary' ? (
             <li
               key={index}
-              className="border-gray-300 px-2 py-6 flex flex-col grow gap-1"
+              className="border-gray-300 px-2 md:py-6 py-3 flex flex-col grow gap-1"
             >
               <span className="font-semibold">{data.name}</span>
               <span>{data.value}</span>
@@ -33,7 +33,7 @@ const SideAnalysis = ({ analysis }) => {
           ) : (
             <li
               key={index}
-              className="border-b border-gray-300 px-2 py-6 flex justify-between"
+              className="border-b border-gray-300 px-2 md:py-6 py-3 flex justify-between"
             >
               <span className="font-semibold">{data.name}</span>
               <span>{data.value}</span>

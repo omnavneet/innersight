@@ -52,11 +52,6 @@ const journalEntrySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    status: {
-      type: String,
-      enum: ['Draft', 'Published', 'Archived'],
-      default: 'Draft',
-    },
   },
   {
     timestamps: true,

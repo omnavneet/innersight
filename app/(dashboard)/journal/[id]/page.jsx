@@ -1,7 +1,6 @@
 import Editor from '@/app/components/Editor'
 import getUserByClerkId from '@/app/libs/auth'
-import { AnalysisModel, JournalEntryModel, UserModel } from '@/app/models/Ad'
-import { model } from 'mongoose'
+import { JournalEntryModel } from '@/app/models/Ad'
 import React from 'react'
 
 const getEntry = async (id) => {

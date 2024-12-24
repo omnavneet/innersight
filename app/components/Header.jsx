@@ -11,16 +11,16 @@ const Header = () => {
   ]
 
   return (
-    <div className="flex items-center justify-between py-7 pl-10 pr-12">
+    <div className="flex items-center justify-between py-5 lg:pl-10 lg:pr-12 px-2">
       <div
-        className="text-[#d35400] text-5xl font-bold cursor-pointer hidden lg:block md:block"
+        className="text-5xl font-bold cursor-pointer hidden lg:block"
         onClick={() => redirect('/journal')}
       >
         InnerSight
       </div>
 
-      <div className="bg-[#ff846fca] rounded-full px-8 py-3 flex justify-center items-center md:ml-[-220px] ml-[-32x] shadow-lg hover:shadow-2xl ">
-        <ul className="flex gap-10 text-lg">
+      <div className="bg-[#d35400] rounded-full md:px-8 px-5 py-3 flex justify-center items-center lg:ml-[-220px] shadow-lg hover:shadow-2xl">
+        <ul className="flex gap-10 text-lg text-[#fff2eb]">
           {links.map((link) => (
             <li
               key={link.name}
@@ -33,7 +33,7 @@ const Header = () => {
         </ul>
       </div>
 
-      <div className="scale-125">
+      <div className="scale-125 flex justify-center items-center cursor-pointer">
         <UserButton />
       </div>
     </div>

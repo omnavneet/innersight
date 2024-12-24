@@ -12,7 +12,9 @@ const getAllEntries = async () => {
   const user = await getUserByClerkId()
   const entries = await JournalEntryModel.find({
     userId: user?.id,
-  }).sort({ createdAt: -1 })
+  })
+    .sort({ createdAt: -1 })
+    .populate('analysis')
 
   return entries
 }

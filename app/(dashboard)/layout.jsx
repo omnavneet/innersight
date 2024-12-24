@@ -3,7 +3,7 @@ import Header from '../components/Header'
 
 const dashboardLayout = ({ children }) => {
   return (
-    <div className="h-screen w-screen bg-[#fff2eb]">
+    <div className="h-screen w-full bg-[#fff2eb]">
       <div>
         <Header />
         <div>{children}</div>
